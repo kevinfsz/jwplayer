@@ -914,7 +914,7 @@ Object.assign(Controller.prototype, {
             'setCurrentCaptions',
             'setCurrentQuality',
             'setFullscreen',
-        ], () => !_programController.activeProvider);
+        ], () => !this._model.itemReady);
         // Add commands from CoreLoader to queue
         apiQueue.queue.push.apply(apiQueue.queue, commandQueue);
 
